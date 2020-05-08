@@ -4,26 +4,6 @@ const SalePrice = require('../models/salePrice');
 
 const router = express.Router();
 
-router.post('/product', async(req,res) =>{
-
-    const { name } = req.body;
-
-    try{
-        
-        if( await Product.findOne({ name }))
-            return res.status(400).send({ error: "Product already exist"})
-
-        const product = await Product.create(req.body);
-            
-        return res.send({ product })
-    
-    } catch(err){
-        console.log(err)
-        return res.status(400).send({ error: 'Registration failed'});
-    }
-
-});
-
 router.get('/product', async (req,res) =>{
     try{
         const product = await Product.find();
@@ -34,21 +14,6 @@ router.get('/product', async (req,res) =>{
         return res.status(400).send({ error: 'Error loading products'});
     }
 })
-
-router.post('/saleprice', async(req,res) =>{
-
-    try{
-	
-        const salePrice = await SalePrice.create(req.body);
-            
-        return res.send({ salePrice })
-    
-    } catch(err){
-        console.log(err)
-        return res.status(400).send({ error: 'Registration failed' + err});
-    }
-
-});
 
 router.put('/salePrice/:salePriceId', async(req,res) =>{
     

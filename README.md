@@ -23,16 +23,26 @@ docker run -d -p 27017:27017 -p 28017:28017 -e AUTH=no tutum/mongodb
 
 ### Instalando dependencias
 
-Acesse a pasta /backend e utilize o comando abaixo para baixar as dependencias.
+Utilize o comando abaixo para baixar as dependencias.
 
 ```bash
+cd .\backend\
 npm install
 ```
 
-### Executar o backend
+### Setup do backend
 
-Para executar o banckend acesse a pasta backend/src e utilize o comando abaixo:
+Antes de iniciar o projeto devesse preparar o ambiente, para fazer isso execute o script abaixo:
 
 ```bash
-node index.js
+npm run-script setup
+```
+Após o script executar, pode encerrar ele e o utilize caso deseje resetar novamente o projeto.
+
+### Iniciar o backend
+
+Para iniciar utilize o comando abaixo estando no diretorio do backend.
+
+```bash
+npm run-script start
 ```

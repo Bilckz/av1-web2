@@ -1,6 +1,6 @@
 import http from "../http-common";
 
-class TutorialDataService {
+class Req {
   getAll() {
     return http.get("/product");
   }
@@ -14,4 +14,4 @@ class TutorialDataService {
   }
 }
 
-export default new TutorialDataService();
+export default new Req();

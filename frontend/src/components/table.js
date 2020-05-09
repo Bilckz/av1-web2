@@ -10,7 +10,7 @@ import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
-import http from '../services/tutorial.service'
+import Req from '../services/service'
 
 const useStyles = makeStyles({
   table: {
@@ -33,7 +33,9 @@ function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
 }
 
-const percentage = null
+
+
+const percentage = 10
 
 const rows = [
   createData(1,'Mouse HP 200', 40, 44),
@@ -68,7 +70,7 @@ export default function SimpleTable() {
           ))}
         </TableBody>
       </Table>
-      <TextField className={classes.textField} value={percentage} type="number" maxlength="3" label="Margem de lucro (%)" />
+      <TextField className={classes.textField} type="number"  label="Margem de lucro (%)" />
       <Button className={classes.button} variant="contained">Atualizar preço</Button>
     </TableContainer>
   );

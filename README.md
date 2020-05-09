@@ -46,3 +46,21 @@ Para iniciar utilize o comando abaixo estando no diretorio do backend.
 ```bash
 npm run-script start
 ```
+
+## FRONTEND
+
+### Instalando dependencias
+
+Na pasta de frontend localizada na raiz do projeto, utilize o comando abaixo para baixar as dependencias.
+
+```bash
+npm install
+```
+
+### Iniciar o frontend
+
+Para iniciar utilize o comando abaixo estando no diretorio do frontend.
+
+```bash
+npm start
+```
